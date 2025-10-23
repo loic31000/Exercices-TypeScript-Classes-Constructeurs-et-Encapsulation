@@ -15,14 +15,25 @@
 // Exercice 2
 // Crée une classe SafeBox avec une propriété privée secretCode.
 // Ajoute une méthode publique open(code: string) qui vérifie si le code est correct.
-var safeBox = /** @class */ (function () {
-    function safeBox(secretcode) {
-        this.secretcode = secretcode;
-    }
-    safeBox.prototype.open = function () {
-        console.log("Le code secret est", this.secretcode);
-    };
-    return safeBox;
-}());
-var showCode = new safeBox("Mai@", 1234);
-showCode.open();
+// class SafeBox {
+//   private secretCode: string;
+//   private codePattern = /^[a-zA-Z0-9@.]+$/;  // Regex pour valider format
+//   constructor(secretCode: string) {
+//     this.secretCode = secretCode;
+//   }
+//   public open(code: string): void {
+//     if (!this.codePattern.test(code)) {
+//       console.log("Format du code invalide.");
+//       return;
+//     }
+//     if (code === this.secretCode) {
+//       console.log("Coffre ouvert !");
+//     } else {
+//       console.log("Code incorrect.");
+//     }
+//   }
+// }
+// const showCode = new SafeBox("Loic@.Z");
+// showCode.open("Loic@.Z");  // Coffre ouvert !
+// showCode.open("1234");     // Code incorrect.
+// showCode.open("Loic<>Z"); // Format du code invalide.
