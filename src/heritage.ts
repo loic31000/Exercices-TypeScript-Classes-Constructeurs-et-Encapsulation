@@ -105,3 +105,153 @@
 
 // const showVehicule2 = new Car("Nissan","GTR");
 // showVehicule2.infoCar();
+
+// Exercice 4 – Redéfinition de méthode
+
+// Crée une classe Shape avec une méthode getArea() qui retourne 0.
+// Crée une classe Rectangle qui hérite de Shape et redéfinit getArea() pour calculer l’aire réelle.
+
+//     Testez les attributs et méthodes des classes.
+
+// class Shape {
+//   public lenght: number;
+
+//   constructor(lenght: number) {
+//     this.lenght = lenght;
+//   }
+
+//   getArea() {
+//     return 0;
+//   }
+// }
+
+// const aire = new Shape(10);
+// aire.getArea();
+
+// class Rectangle extends Shape {
+//   public height: number;
+//   public width: number;
+
+//   constructor(height: number, width: number, lenght: number) {
+//     super(lenght);
+//     this.height = height;
+//     this.width = width;
+//   }
+//   getArea2() {
+//     console.log(this.lenght * this.width);
+//   }
+// }
+
+// const modifGetarea = new Rectangle(0, 2, 10);
+// aire.getArea();
+// modifGetarea.getArea2();
+
+// Exercice 5 – Multi-niveaux d’héritage
+
+// Crée trois classes :
+// LivingBeing → Animal → Cat.
+// Chaque classe doit avoir une méthode spécifique :
+
+//     LivingBeing: breathe()
+//     Animal: eat()
+//     Cat: meow()
+
+// class LivingBeing {
+//   public breathe: string;
+
+//   constructor(breathe: string) {
+//     this.breathe = breathe;
+//   }
+//   infoLivingBeing() {}
+// }
+// const showBreath = new LivingBeing("");
+// showBreath.infoLivingBeing();
+
+// class Animal extends LivingBeing {
+//   public eat: string;
+
+//   constructor(eat: string, breathe: string) {
+//     super(breathe);
+//     this.eat = eat;
+//   }
+//   infoAnimal() {
+//     console.log("Le chat", this.breathe, "et", this.eat);
+//   }
+// }
+// const showCat = new Animal("respire", "mange");
+// showCat.infoAnimal();
+
+// class Cat extends Animal {
+//   public meow: string;
+
+//   constructor(eat: string, breathe: string, meow: string) {
+//     super(eat, breathe);
+//     this.meow = meow;
+//   }
+
+//   infoTotal() {
+//     console.log(
+//       "Le chat",
+//       this.meow,
+//       "car il veut",
+//       this.eat,
+//       "et il",
+//       this.breathe
+//     );
+//   }
+// }
+
+// const infoAnimal2 = new Cat("mangé", "respire", "miaule");
+// infoAnimal2.infoTotal();
+
+// Exercice 7 – Ajout d’une méthode spécifique
+// Crée une classe Device avec une méthode turnOn().
+// Crée une classe Smartphone qui hérite de Device et ajoute une méthode takePhoto().
+
+// class Device {
+//   public model: string;
+
+//   constructor(model: string) {
+//     this.model = model;
+//   }
+
+//   turnOn() {}
+// }
+// const showModel = new Device("");
+// showModel.turnOn();
+
+// class Smartphone extends Device {
+//   public brand: string;
+
+//   constructor(brand: string, model: string) {
+//     super(model);
+//     this.brand = brand;
+//   }
+//   takePhoto() {
+//     console.log("La", this.brand, "est Samsung et le model est", this.model);
+//   }
+// }
+// const infoFinal = new Smartphone("marque", "Galaxy A13");
+// infoFinal.takePhoto();
+
+// Crée une classe Vehicle et une classe Bike qui hérite de Vehicle. Crée un tableau contenant des Vehicle et des Bike.
+// Parcours le tableau et appelle l'attribut speed commun sur chacun.
+
+class Vehicle {
+    public speed:number;
+
+    constructor(speed:number){
+        this.speed = speed;
+    }
+Vehicle = []
+}
+
+class Bike extends Vehicle {
+public speed:number;
+
+constructor(speed:number){
+    super(speed);
+}
+Bike = []
+
+}
